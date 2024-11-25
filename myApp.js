@@ -9,6 +9,13 @@ app.get("/", (req, res) =>{
 style_css = __dirname + "/public";
 app.use("/public", express.static(style_css))
 
+//REST API integration
+app.get("/json", (req, res) => {
+    res.json(
+        {"message": "Hello json"}
+    )
+})
+
 
 
 
